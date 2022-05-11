@@ -1,4 +1,4 @@
-node_modules/# Logs
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -102,5 +102,3 @@ dist
 
 # TernJS port file
 .tern-port
-© 2022 GitHub, Inc.
-Terms
