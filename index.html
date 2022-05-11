@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="/css/main.css">
     <meta name="description" content="Building the Best Fences and custom gates in Southwest Louisiana.">
 </head>
-<body class="bg-amber-50 font-sans">
+<body class="bg-yellow-50 font-sans">
     <header>
-        <nav class="grid grid-cols-3">
-            <div class="nav-logo bg-orange-100 p-2 flex justify-center">
+        <nav class="grid grid-cols-3 overflow-hidden">
+            <div class="nav-logo bg-yellow-100 p-2 flex justify-center">
                 <img src="images/logo.webp" alt="Company Logo" class="my-auto max-h-28">
             </div>
-            <div class="col-span-2 flex flex-col bg-amber-50">
-                <div class="bg-yellow-900 text-amber-50">
+            <div class="col-span-2 flex flex-col bg-yellow-50">
+                <div class="bg-yellow-900 text-yellow-50">
                     <div class="flex flex-col justify-around items-center p-2 md:flex-row">
                         <a href="tel:+5555555555" class="">(555) 555-5555</a>
                         <a href="mailto:email@email.com">email@email.com</a>
                     </div>
                 </div>
-                <div class="relative self-end m-3 bg-yellow-900 p-4  md:hidden">
+                <div class="relative self-end m-3 bg-yellow-900 p-4  lg:hidden">
                     <button
                         id="menu-btn"
                         class="block hamburger focus:outline-none"
@@ -32,8 +32,27 @@
                         <span class="hamburger-bottom"></span>
                     </button>
                 </div>
+
+                <div class="hidden grid-cols-6 gap-3 mt-2 lg:grid">
+                    <a href="#" class="col-start-2 py-5 flex justify-center items-center hover:bg-yellow-900">About</a>
+                    <a href="#" class="py-5 flex justify-center items-center hover:bg-yellow-900">Service</a>
+                    <a href="#" class="py-5 flex justify-center items-center hover:bg-yellow-900">Reviews</a>
+                    <a href="#" class="py-5 flex justify-center items-center hover:bg-yellow-900">Gallery</a>
+                </div>
+            </div>
+
+            <div id="menu" class="hidden flex-col justify-evenly items-center col-span-3 lg:hidden ">
+                <a href="#" class="my-1">About</a>
+                <a href="#" class="my-1">Service</a>
+                <a href="#" class="my-1">Reviews</a>
+                <a href="#" class="my-1">Gallery</a>
+                <a href="tel:+55555555555" class="my-1">(555) 555-5555</a>
             </div>
         </nav>
+
+        <section id="hero">
+
+        </section>
     </header>
 
     <script src="js/script.js"></script>

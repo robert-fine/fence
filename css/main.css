@@ -468,32 +468,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 30em) {
-  .container {
-    max-width: 30em;
-  }
-}
-
-@media (min-width: 48em) {
-  .container {
-    max-width: 48em;
-  }
-}
-
-@media (min-width: 61em) {
-  .container {
-    max-width: 61em;
-  }
-}
-
-@media (min-width: 90em) {
-  .container {
-    max-width: 90em;
-  }
+.invisible {
+  visibility: hidden;
 }
 
 .relative {
@@ -504,18 +480,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column: span 2 / span 2;
 }
 
-.m-3 {
-  margin: 0.75rem;
+.col-span-3 {
+  grid-column: span 3 / span 3;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.m-3 {
+  margin: 0.75rem;
 }
 
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .block {
@@ -530,40 +518,54 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
 }
 
-.max-h-12 {
-  max-height: 3rem;
-}
-
-.max-h-20 {
-  max-height: 5rem;
+.hidden {
+  display: none;
 }
 
 .max-h-28 {
   max-height: 7rem;
 }
 
-.max-w-6xl {
-  max-width: 72rem;
+.min-h-full {
+  min-height: 100%;
 }
 
-.max-w-lg {
-  max-width: 32rem;
-}
-
-.max-w-sm {
-  max-width: 24rem;
-}
-
-.max-w-xs {
-  max-width: 20rem;
+.min-h-fit {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.place-content-center {
+  place-content: center;
+}
+
+.place-content-stretch {
+  place-content: stretch;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+.place-items-stretch {
+  place-items: stretch;
 }
 
 .content-center {
@@ -574,6 +576,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.items-stretch {
+  align-items: stretch;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -582,12 +588,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-around;
 }
 
-.justify-items-center {
-  justify-items: center;
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .self-end {
   align-self: flex-end;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .bg-amber-50 {
@@ -595,19 +625,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 251 235 / var(--tw-bg-opacity));
 }
 
+.bg-orange-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
+}
+
 .bg-yellow-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(113 63 18 / var(--tw-bg-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .bg-yellow-100 {
@@ -620,39 +645,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
-.bg-orange-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
-}
-
-.bg-orange-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(124 45 18 / var(--tw-bg-opacity));
-}
-
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .p-2 {
   padding: 0.5rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
 }
 
 .p-4 {
   padding: 1rem;
 }
 
-.p-1 {
-  padding: 0.25rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
-.align-middle {
-  vertical-align: middle;
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .font-sans {
@@ -662,6 +680,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-amber-50 {
   --tw-text-opacity: 1;
   color: rgb(255 251 235 / var(--tw-text-opacity));
+}
+
+.text-yellow-50 {
+  --tw-text-opacity: 1;
+  color: rgb(254 252 232 / var(--tw-text-opacity));
 }
 
 /* Hamburger Menu */
@@ -712,6 +735,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: rotate(-45deg) translateY(7px) translate(-7px);
 }
 
+.hover\:bg-yellow-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 63 18 / var(--tw-bg-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -722,25 +750,25 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: none;
   }
 
-  .md\:max-w-sm {
-    max-width: 24rem;
-  }
-
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:flex-col {
-    flex-direction: column;
   }
 }
 
 @media (min-width: 61em) {
-  .lg\:max-w-sm {
-    max-width: 24rem;
+  .lg\:block {
+    display: block;
   }
 
-  .lg\:max-w-xs {
-    max-width: 20rem;
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:grid {
+    display: grid;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 }
