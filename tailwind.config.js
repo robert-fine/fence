@@ -7,6 +7,9 @@ module.exports = {
       lg: '61em',
       xl: '90em'
     }, 
+    container: {
+      padding: '1rem'
+    },
     extend: {},
   },
   plugins: [],

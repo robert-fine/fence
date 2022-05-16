@@ -48,3 +48,10 @@
   .open .hamburger-bottom {
     transform: rotate(-45deg) translateY(7px) translate(-7px);
   }
+
+
+  /* About Background */
+  #about {
+    background-image: linear-gradient(rgba(254,252,232,0.7), rgb(254,252,232)),url(../images/about.webp);
+
+  }
