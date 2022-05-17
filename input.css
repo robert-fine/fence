@@ -52,6 +52,6 @@
 
   /* About Background */
   #about {
-    background-image: linear-gradient(rgba(254,252,232,0.5), rgb(254,252,232)),url(../images/about.webp);
+    background-image: linear-gradient(rgb(254,252,232), rgba(254,252,232,0.6), rgb(254,252,232)),url(../images/about.webp);
 
   }
