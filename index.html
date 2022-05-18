@@ -79,7 +79,7 @@
 
     <main>
         <section id="services">
-            <div class="container mx-auto">
+            <div class="container mx-auto mb-8">
                 <div class="pt-16">
                     <h2 class="py-3 text-3xl">Services</h2>
                     <!-- <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 bg-yellow-100">
@@ -98,7 +98,7 @@
                             <div class="flex flex-col p-4 justify-center items-center">
                                 <p class="pb-2 text-2xl">Custom Gates</p>
                                 <p class="text-center pb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore qui consectetur ratione repudiandae laborum temporibus eveniet, totam distinctio error!</p>
-                                <a href="#" class="py-2 px-5 border-2 border-yellow-500 hover:bg-yellow-500">Learn More</a>
+                                <a href="#" class="py-2 px-5 border-2 border-yellow-500 transition-all duration-300 hover:bg-yellow-500">Learn More</a>
                             </div>
                         </div>
 
@@ -107,7 +107,7 @@
                             <div class="flex flex-col p-4 justify-center items-center">
                                 <p class="pb-2 text-2xl text-center">Automatic Opener Installation</p>
                                 <p class="text-center pb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore qui consectetur ratione repudiandae laborum temporibus eveniet, totam distinctio error!</p>
-                                <a href="#" class="py-2 px-5 border-2 border-yellow-500 hover:bg-yellow-500">Learn More</a>
+                                <a href="#" class="py-2 px-5 border-2 border-yellow-500 transition-all duration-300 delay-75 hover:bg-yellow-500">Learn More</a>
                             </div>
                         </div>
 
@@ -116,7 +116,7 @@
                             <div class="flex flex-col p-4 justify-center items-center">
                                 <p class="pb-2 text-2xl">Privacy Fence</p>
                                 <p class="text-center pb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore qui consectetur ratione repudiandae laborum temporibus eveniet, totam distinctio error!</p>
-                                <a href="#" class="py-2 px-5 border-2 border-yellow-500 hover:bg-yellow-500">Learn More</a>
+                                <a href="#" class="py-2 px-5 border-2 border-yellow-500 transition-all duration-300 hover:bg-yellow-500">Learn More</a>
                             </div>
                         </div>
 
@@ -125,7 +125,7 @@
                             <div class="flex flex-col p-4 justify-center items-center">
                                 <p class="pb-2 text-2xl">Other Fences</p>
                                 <p class="text-center pb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore qui consectetur ratione repudiandae laborum temporibus eveniet, totam distinctio error!</p>
-                                <a href="#" class="py-2 px-5 border-2 border-yellow-500 hover:bg-yellow-500">Learn More</a>
+                                <a href="#" class="py-2 px-5 border-2 border-yellow-500 transition-all duration-300 hover:bg-yellow-500">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,44 @@
             <div class="container mx-auto">
                 <div class="pt-16">
                     <h2 class="py-2 text-3xl">Reviews</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati rem omnis in modi consequatur nemo officia vel blanditiis vitae quibusdam facilis suscipit error corrupti at incidunt tempora illo, praesentium dignissimos itaque, recusandae quod? Maxime nobis facere, sapiente perferendis molestias iste, aperiam est ipsam obcaecati distinctio esse id! Veniam, officiis quam.</p>
+
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-7">
+                        <div class="grid grid-cols-5 bg-yellow-100 p-4 xl:col-span-3">
+                            <div class="m-2 col-span-4 flex flex-col justify-center">
+                                <p class="max-w-prose">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolores rerum hic labore molestias nam, nisi delectus provident quam inventore autem! Consequatur ut asperiores tempore.</p>
+                                <p class="mt-2 text-sm self-end">- Judy Smith</p>
+                            </div>
+                            <img src="/images/quote.svg" alt="" class="w-4/5">
+                        </div>
+                        <div class="grid grid-cols-5 bg-yellow-100 p-4 xl:col-start-5 xl:col-span-3">
+                            <div class="m-2 col-span-4 flex flex-col justify-center">
+                                <p class="max-w-prose">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, quia laudantium perspiciatis, iusto minus eius, distinctio veritatis officiis at reiciendis est? Obcaecati illo ea laborum.</p>
+                                <p class="mt-2 text-sm self-end">- Alan Walters</p>
+                            </div>
+                            <img src="/images/quote.svg" alt="" class="w-4/5">
+                        </div>
+                    </div>
+
+                    <details class="flex flex-col">
+                        <summary>Submit a Review</summary>
+                        <!-- NEED TO ADD A LINK TO FACEBOOK REVIEWS, ASK IF THEY HAVE FACEBOOK PAGE MANAGER -->
+                        <a 
+                            href="#"
+                            class="my-4 hover:text-yellow-900 hover:underline transition-all duration-300 md:mx-0"
+                            target="_blank"
+                            >Submit a review on Facebook &gt;
+                        </a>
+        
+                        <!-- NEED TO ADD A LINK TO GOOGLE REVIEWS, ASK IF THEY HAVE GOOGLE PAGE MANAGER -->
+                        <a 
+                            href="#"
+                            class="hover:text-yellow-900 hover:underline transition-all duration-300 md:mx-0"
+                            target="_blank"
+                            >Submit a review on Google &gt;
+                        </a>
+                    </details>
+   
+
                 </div>
         </section>
 
@@ -189,7 +226,7 @@
                 </li>
 
                 <li>
-                    <button class="py-3 px-8 bg-yellow-500 text-black hover:bg-yellow-600" href="#">Get a Quote</button>
+                    <button class="py-3 px-8 bg-yellow-500 text-black transition-all duration-300 hover:bg-yellow-600" href="#">Get a Quote</button>
                 </li>
             </ul>
         </div>
