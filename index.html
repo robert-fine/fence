@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <meta name="description" content="Building the Best Fences and custom gates in Southwest Louisiana.">
 </head>
-<body class="bg-yellow-50 font-sans">
+<body class="bg-yellow-50 font-sans relative">
     <header>
         <nav class="grid grid-cols-3">
             <div class="nav-logo bg-yellow-100 p-2 flex justify-center">
@@ -23,7 +23,7 @@
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
                              </svg>
-                             <a href="tel:+5555555555" class="pl-1">(555) 555-5555</a>
+                             <a href="tel:5555555555" class="pl-1">(555) 555-5555</a>
                         </div>
 
                         <div class="flex justify-center items-center">
@@ -63,7 +63,7 @@
                     <a href="#about" class="my-1">About</a>
                     <a href="#reviews" class="my-1">Reviews</a>
                     <a href="#gallery" class="my-1">Gallery</a>
-                    <a href="tel:+55555555555" class="my-1">(555) 555-5555</a>
+                    <a href="tel:5555555555" class="my-1">(555) 555-5555</a>
                 </div>
             </div>
         </nav>
@@ -72,7 +72,7 @@
             <div class="container mx-auto flex flex-col justify-center items-center text-center min-h-[50vh] lg:min-h-[75vh]">
                 <p class="text-white">Acadiana's Premier</p>
                 <h1 class="text-white text-4xl max-w-prose lg:text-5xl">Custom Metal Gate & Fence Builders</h1>
-                <button class=" mt-5 py-3 px-5 bg-yellow-900 text-white transition-all duration-300 hover:bg-yellow-700 ">Get a Quote</button>
+                <button class="get-quote mt-5 py-3 px-5 bg-yellow-500 transition-all duration-300 hover:bg-yellow-600 ">Get a Quote</button>
             </div>
         </section>
     </header>
@@ -201,6 +201,70 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati rem omnis in modi consequatur nemo officia vel blanditiis vitae quibusdam facilis suscipit error corrupti at incidunt tempora illo, praesentium dignissimos itaque, recusandae quod? Maxime nobis facere, sapiente perferendis molestias iste, aperiam est ipsam obcaecati distinctio esse id! Veniam, officiis quam.</p>
                 </div>
         </section>
+
+        <section id="quote-form" class="sr-only fixed inset-0 backdrop-blur backdrop-brightness-50">
+            <div class="container mx-auto flex justify-center items-center h-screen">
+                <form 
+                    method="POST"
+                    data-netlify="true"
+                    class="relative bg-yellow-50 p-4 flex flex-col items-center drop-shadow-lg"
+                    >
+                    <img src="/images/close.svg" alt="close quote form" id="close-quote" class="w-8 absolute right-2 top-2 cursor-pointer">
+                    <h2 class="my-2 md:text-2xl md:my-4">Request a quote</h2>
+
+                    <div class="flex flex-col pb-2 w-full">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="quote-name" class="border-2 border-yellow-500" required>
+                    </div>
+
+                    <div class="flex flex-col pb-2 w-full">
+                        <label for="email">Your Email</label>
+                        <input type="email" name="email" id="quote-email" class="border-2 border-yellow-500" required>
+                    </div>
+
+                    <div class="flex flex-col pb-2 w-full">
+                        <label for="phone">Your Phone Number</label>
+                        <input type="tel" name="phone" id="quote-phone" class="border-2 border-yellow-500" required>
+                    </div>
+
+                    <fieldset class="flex flex-col pb-2 w-full">
+                        <legend>Preferred Contact Method</legend>
+                        <div class="flex w-full md:flex-col">
+                            <div>
+                                <label><input type="radio" name="contact" id="contactChoice1-phone" value="phone" class="accent-yellow-900" checked> Phone</label>
+                            </div>
+                            <div>
+                                <label><input type="radio" name="contact" id="contactChoice2-email" value="email" class="accent-yellow-900"> Email</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="grid grid-cols-1 pb-2 md:grid-cols-2">
+                        <legend class="md:col-span-2">Choose the service(s) you would like to have quoted</legend>
+                        <p class="text-xs md:col-span-2">(Check all that apply)</p>
+                        <div>
+                            <label><input type="checkbox" name="gate" id="gate" class="accent-yellow-900"> Custom Gate Fabrication</label>
+                        </div>
+                        <div>
+                            <label><input type="checkbox" name="opener" id="opener" class="accent-yellow-900"> Automatic Opener Installation</label>
+                        </div>
+                        <div>
+                            <label> <input type="checkbox" name="fence" id="fence" class="accent-yellow-900"> Fence Construction</label>
+                        </div>
+                        <div>
+                            <label><input type="checkbox" name="repair" id="repair" class="accent-yellow-900"> Gate or Fence Repair</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="flex flex-col pb-2 w-full">
+                        <label for="message">Additional Comments</label>
+                        <textarea name="message" id="quote-message" class="border-2 border-yellow-500" cols="30" rows="4"></textarea>
+                    </div>
+
+                    <input type="submit" value="Submit" class="bg-yellow-500 py-2 px-8 hover:bg-yellow-600 cursor-pointer justify-self-start md:my-2">
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="mt-8 bg-[url('/images/footer.svg')] bg-repeat min-h-[7rem]">
@@ -226,7 +290,7 @@
                 </li>
 
                 <li>
-                    <button class="py-3 px-8 bg-yellow-500 text-black transition-all duration-300 hover:bg-yellow-600" href="#">Get a Quote</button>
+                    <button class="get-quote py-3 px-8 bg-yellow-500 text-black transition-all duration-300 hover:bg-yellow-600" href="#">Get a Quote</button>
                 </li>
             </ul>
         </div>

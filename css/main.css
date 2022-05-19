@@ -498,12 +498,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .left-0 {
@@ -516,6 +544,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .top-0 {
   top: 0px;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.top-2 {
+  top: 0.5rem;
 }
 
 .col-span-2 {
@@ -566,8 +602,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mt-8 {
@@ -580,14 +629,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-4 {
   margin-bottom: 1rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
 }
 
 .block {
@@ -630,16 +671,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100vw;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-4\/5 {
   width: 80%;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-prose {
@@ -649,6 +690,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .rotate-45 {
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-3 {
@@ -665,6 +710,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-rows-2 {
@@ -719,6 +768,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-self: center;
 }
 
+.justify-self-start {
+  justify-self: start;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -752,13 +805,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
-.bg-black\/10 {
-  background-color: rgb(0 0 0 / 0.1);
-}
-
 .bg-yellow-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
+.bg-black\/10 {
+  background-color: rgb(0 0 0 / 0.1);
 }
 
 .bg-\[url\(\'\/images\/heromobile\.webp\'\)\] {
@@ -866,6 +919,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .text-yellow-50 {
   --tw-text-opacity: 1;
   color: rgb(254 252 232 / var(--tw-text-opacity));
@@ -881,20 +939,33 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.accent-yellow-900 {
+  accent-color: #713f12;
+}
+
 .bg-blend-multiply {
   background-blend-mode: multiply;
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.transition {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+.backdrop-blur {
+  --tw-backdrop-blur: blur(8px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.backdrop-brightness-50 {
+  --tw-backdrop-brightness: brightness(.5);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -905,10 +976,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .duration-300 {
   transition-duration: 300ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hamburger Menu */
@@ -970,9 +1037,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(113 63 18 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-yellow-700:hover {
+.hover\:bg-yellow-600:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(161 98 7 / var(--tw-bg-opacity));
+  background-color: rgb(202 138 4 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-yellow-500:hover {
@@ -980,19 +1047,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-yellow-600:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(202 138 4 / var(--tw-bg-opacity));
-}
-
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.hover\:text-gray-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .hover\:text-yellow-900:hover {
@@ -1011,9 +1068,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 48em) {
+  .md\:fixed {
+    position: fixed;
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .md\:my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .md\:my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .md\:block {
@@ -1028,44 +1103,21 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: row;
   }
 
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
   .md\:bg-\[url\(\'\/images\/hero\.webp\'\)\] {
     background-image: url('/images/hero.webp');
   }
 
-  .md\:text-left {
-    text-align: left;
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width: 61em) {
-  .lg\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
-  .lg\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
-  .lg\:col-start-2 {
-    grid-column-start: 2;
-  }
-
-  .lg\:col-start-3 {
-    grid-column-start: 3;
-  }
-
-  .lg\:col-start-4 {
-    grid-column-start: 4;
-  }
-
-  .lg\:col-start-5 {
-    grid-column-start: 5;
-  }
-
-  .lg\:col-start-6 {
-    grid-column-start: 6;
-  }
-
   .lg\:grid {
     display: grid;
   }
@@ -1080,26 +1132,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-7 {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-9 {
-    grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
   .lg\:grid-rows-3 {
@@ -1117,20 +1149,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 3 / span 3;
   }
 
-  .xl\:col-start-4 {
-    grid-column-start: 4;
-  }
-
   .xl\:col-start-5 {
     grid-column-start: 5;
   }
 
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .xl\:grid-cols-9 {
-    grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
   .xl\:grid-cols-7 {
