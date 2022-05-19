@@ -20,4 +20,7 @@ quoteCloseBtn.addEventListener('click', toggleQuoteForm)
 
 function toggleQuoteForm() {
   quote.classList.toggle('sr-only')
+  quote.classList.toggle('w-screen')
+  quote.classList.toggle('h-screen')
+  quote.classList.toggle('overflow-hidden')
 }
