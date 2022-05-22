@@ -72,7 +72,7 @@
             <div class="container mx-auto flex flex-col justify-center items-center text-center min-h-[50vh] lg:min-h-[75vh]">
                 <p class="text-white">Acadiana's Premier</p>
                 <h1 class="text-white text-4xl max-w-prose lg:text-5xl">Custom Metal Gate & Fence Builders</h1>
-                <button class="get-quote mt-5 py-3 px-5 bg-yellow-500 transition-all duration-300 hover:bg-yellow-600 ">Get a Quote</button>
+                <a href="#quote" class="get-quote mt-5 py-3 px-5 bg-yellow-500 transition-all duration-300 hover:bg-yellow-600 ">Get a Quote</a>
             </div>
         </section>
     </header>
@@ -82,15 +82,6 @@
             <div class="container mx-auto mb-8">
                 <div class="pt-16">
                     <h2 class="py-3 text-3xl">Services</h2>
-                    <!-- <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 bg-yellow-100">
-                        <div class="grid grid-cols-1 grid-rows-2">
-                            <img src="/images/gate.webp" alt="">
-                            <div class="flex flex-col p-4 justify-center items-center">
-                                <p class="pb-2 text-2xl">Custom Gates</p>
-                                <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore qui consectetur ratione repudiandae laborum temporibus eveniet, totam distinctio error!</p>
-                            </div>
-                        </div>
-                    </div> -->
 
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
                         <div class="grid grid-cols-1 grid-rows-2 bg-yellow-100">
@@ -202,30 +193,32 @@
                 </div>
         </section>
 
-        <section id="quote-form" class="sr-only fixed inset-0 backdrop-blur backdrop-brightness-50">
-            <div class="container mx-auto flex justify-center items-center h-screen">
+        <section id="contact">
+            <div class="container mx-auto pt-16 grid grid-cols-1 gap-6 items-center lg:grid-cols-2">
+                <h2 class="py-3 text-3xl lg:col-span-2">Contact Us</h2>
+
                 <form 
+                    id="quote"
                     name="Quote Request"
                     method="POST"
                     data-netlify="true"
-                    class="relative bg-yellow-50 p-4 flex flex-col items-center drop-shadow-lg"
+                    class="relative bg-yellow-50 py-3 flex flex-col items-center"
                     >
-                    <img src="/images/close.svg" alt="close quote form" id="close-quote" class="w-8 absolute right-2 top-2 cursor-pointer">
-                    <h2 class="my-2 md:text-2xl md:my-4">Request a quote</h2>
+                    <h3 class="my-2 text-2xl">Request a quote</h3>
 
                     <div class="flex flex-col pb-2 w-full">
                         <label for="name">Your Name</label>
-                        <input type="text" name="name" id="quote-name" class="border-2 border-yellow-500" required>
+                        <input type="text" name="name" id="quote-name" class="border-2 border-yellow-500 outline-yellow-900 focus:outline-offset-2" required>
                     </div>
 
                     <div class="flex flex-col pb-2 w-full">
                         <label for="email">Your Email</label>
-                        <input type="email" name="email" id="quote-email" class="border-2 border-yellow-500" required>
+                        <input type="email" name="email" id="quote-email" class="border-2 border-yellow-500 outline-yellow-900 focus:outline-offset-2" required>
                     </div>
 
                     <div class="flex flex-col pb-2 w-full">
                         <label for="phone">Your Phone Number</label>
-                        <input type="tel" name="phone" id="quote-phone" class="border-2 border-yellow-500" required>
+                        <input type="tel" name="phone" id="quote-phone" class="border-2 border-yellow-500 outline-yellow-900 focus:outline-offset-2" required>
                     </div>
 
                     <fieldset class="flex flex-col pb-2 w-full">
@@ -240,38 +233,40 @@
                         </div>
                     </fieldset>
 
-                    <fieldset class="grid grid-cols-1 pb-2 md:grid-cols-2">
-                        <legend class="md:col-span-2">Choose the service(s) you would like to have quoted</legend>
-                        <p class="text-xs md:col-span-2">(Check all that apply)</p>
-                        <div>
+                    <fieldset class="grid grid-cols-1 pb-2 w-full">
+                        <legend>Choose the service(s) you would like to have quoted</legend>
                             <label><input type="checkbox" name="gate" id="gate" class="accent-yellow-900"> Custom Gate Fabrication</label>
-                        </div>
-                        <div>
                             <label><input type="checkbox" name="opener" id="opener" class="accent-yellow-900"> Automatic Opener Installation</label>
-                        </div>
-                        <div>
-                            <label> <input type="checkbox" name="fence" id="fence" class="accent-yellow-900"> Fence Construction</label>
-                        </div>
-                        <div>
+                            <label><input type="checkbox" name="fence" id="fence" class="accent-yellow-900"> Fence Construction</label>
                             <label><input type="checkbox" name="repair" id="repair" class="accent-yellow-900"> Gate or Fence Repair</label>
-                        </div>
                     </fieldset>
 
                     <div class="flex flex-col pb-2 w-full">
                         <label for="message">Additional Comments</label>
-                        <textarea name="message" id="quote-message" class="border-2 border-yellow-500" cols="30" rows="4"></textarea>
+                        <textarea name="message" id="quote-message" class="border-2 border-yellow-500  outline-yellow-900 focus:outline-offset-2" cols="30" rows="4"></textarea>
                     </div>
 
-                    <input type="submit" value="Submit" class="bg-yellow-500 py-2 px-8 hover:bg-yellow-600 cursor-pointer justify-self-start md:my-2">
+                    <input type="submit" value="Submit" class="self-start bg-yellow-500 py-2 px-8 hover:bg-yellow-600 cursor-pointer justify-self-start md:my-2">
                 </form>
+
+                <div class="grid grid-rows-5 gap-6 w-full h-full">
+                    <div>
+                        <h3 class="my-2 text-2xl md:my-4">Call Us</h3>
+                        <a href="tel:5555555555">(555) 555-5555</a>
+                    </div>
+                    <div class="row-span-4">
+                        <h3 class="my-2 text-3xl overflow-hidden">Servicing Acadiana</h3>
+                        <iframe width="100%" height="85%" class="map" style="border:0" loading="lazy" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOdRcuJOjJoYRDLeA92tLP50&key=AIzaSyCvCBTafpupPbj44R5pVEv_UHxC2EdboFQ"></iframe>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="mt-8 bg-[url('/images/footer.svg')] bg-repeat min-h-[7rem]">
-        <div class="container mx-auto flex flex-col-reverse text-white justify-center items-center h-full">
-            <p class="self-center mb-2">2022&copy; All Rights Reserved</p>
-            <ul class="flex justify-around items-center mt-8 mb-4 w-full">
+        <div class="container mx-auto flex flex-col-reverse text-white justify-center items-center h-full md:flex-row">
+            <p class="self-center mb-2 grow md:mb-0">2022&copy; All Rights Reserved</p>
+            <ul class="flex justify-around items-center mt-8 mb-4 w-1/2">
                 <li>
                     <a href="https://www.facebook.com">
                         <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" color="white"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>    
@@ -284,15 +279,15 @@
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="https://www.twitter.com">
                         <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
                     </a>
-                </li>
+                </li> -->
 
-                <li>
-                    <button class="get-quote py-3 px-8 bg-yellow-500 text-black transition-all duration-300 hover:bg-yellow-600" href="#">Get a Quote</button>
-                </li>
+                <!-- <li>
+                    <button class="get-quote py-3 px-8 bg-yellow-500 text-black transition-all duration-300 hover:bg-yellow-600" href="#quote">Get a Quote</button>
+                </li> -->
             </ul>
         </div>
     </footer>
