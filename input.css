@@ -69,3 +69,14 @@
   -webkit-transform: none;
   transform: none;
 }
+
+/* Heading Decoration */
+.heading-decoration::before {
+  content: "";
+  width: 1.5em;
+  border-bottom: 1px solid #eab308;
+  display: inline-block;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+  margin: 0 1em;
+}
