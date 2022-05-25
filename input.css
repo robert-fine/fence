@@ -50,8 +50,22 @@
   }
 
 
-  /* About Background */
-  #about {
-    background-image: linear-gradient(rgb(254,252,232), rgba(254,252,232,0.6), rgb(254,252,232)),url(../images/about.webp);
+/* About Background */
+#about {
+  background-image: linear-gradient(rgb(254,252,232), rgba(254,252,232,0.6), rgb(254,252,232)),url(../images/about.webp);
+}
 
-  }
+/* Gallery */
+.gallery-item-main {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery-item-main img:hover {
+  -webkit-transform: none;
+  transform: none;
+}

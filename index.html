@@ -189,7 +189,20 @@
             <div class="container mx-auto">
                 <div class="pt-16">
                     <h2 class="py-3 text-3xl">Gallery</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati rem omnis in modi consequatur nemo officia vel blanditiis vitae quibusdam facilis suscipit error corrupti at incidunt tempora illo, praesentium dignissimos itaque, recusandae quod? Maxime nobis facere, sapiente perferendis molestias iste, aperiam est ipsam obcaecati distinctio esse id! Veniam, officiis quam.</p>
+                    <ul class="grid grid-cols-3 grid-rows-3 gap-4 max-h-fit">
+                        <li class="gallery-item gallery-item-main">
+                            <a href="#gallery"><img class="gallery-image transition-all duration-300 hover:scale-105" src="images/gallery4.webp" alt="Iron Gate" loading="lazy"></a>
+                        </li>
+                        <li class="gallery-item grid-row-4">
+                            <a href="#gallery"><img class="gallery-image transition-all duration-300 hover:scale-105" src="images/gallery2.webp" alt="Arched wooden fence" loading="lazy"></a>
+                        </li>
+                        <li class="gallery-item grid-row-4">
+                            <a href="#gallery"><img class="gallery-image transition-all duration-300 hover:scale-105" src="images/gallery3.webp" alt="Iron fence" loading="lazy"></a>
+                        </li>
+                        <li class="gallery-item grid-row-4">
+                            <a href="#gallery"><img class="gallery-image transition-all duration-300 hover:scale-105" src="images/gallery1.webp" alt="Wooden picket fence" loading="lazy"></a>
+                        </li>
+                    </ul>
                 </div>
         </section>
 
@@ -202,7 +215,7 @@
                     name="Quote Request"
                     method="POST"
                     data-netlify="true"
-                    class="relative bg-yellow-50 py-3 flex flex-col lg:order-2"
+                    class="bg-yellow-100 p-6 relative drop-shadow-lg py-3 flex flex-col lg:order-2"
                     >
                     <h3 class="my-2 text-2xl">Request a quote</h3>
 
@@ -284,7 +297,7 @@
                 </li>
 
                 <li>
-                    <a class="get-quote py-3 px-8 bg-yellow-500 text-black transition-all duration-300 hover:bg-yellow-600" href="#quote">Get a Quote</a>
+                    <a class="get-quote py-3 px-8 bg-yellow-500 text-black transition-all duration-300 hover:bg-yellow-600 lg:hidden" href="#quote">Get a Quote</a>
                 </li>
             </ul>
             <p class="row-start-3 flex justify-center w-full mb-2 md:mb-0 md:row-span-2 md:row-start-2">2022&copy; All Rights Reserved</p>

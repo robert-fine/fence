@@ -603,18 +603,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
 .block {
   display: block;
 }
@@ -643,6 +631,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 7rem;
 }
 
+.max-h-fit {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
 .min-h-\[50vh\] {
   min-height: 50vh;
 }
@@ -663,16 +657,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .max-w-prose {
   max-width: 65ch;
-}
-
-.grow {
-  flex-grow: 1;
 }
 
 .rotate-45 {
@@ -704,28 +690,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
-.grid-rows-5 {
-  grid-template-rows: repeat(5, minmax(0, 1fr));
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .grid-rows-6 {
   grid-template-rows: repeat(6, minmax(0, 1fr));
 }
 
-.grid-rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
-.grid-rows-4 {
-  grid-template-rows: repeat(4, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
-}
-
-.flex-col-reverse {
-  flex-direction: column-reverse;
 }
 
 .place-content-stretch {
@@ -740,10 +714,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
-.items-stretch {
-  align-items: stretch;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -754,10 +724,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-evenly {
   justify-content: space-evenly;
-}
-
-.justify-items-stretch {
-  justify-items: stretch;
 }
 
 .gap-3 {
@@ -786,10 +752,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-self-start {
   justify-self: start;
-}
-
-.justify-self-center {
-  justify-self: center;
 }
 
 .overflow-hidden {
@@ -872,6 +834,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-3 {
@@ -970,6 +936,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-color: #713f12;
 }
 
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1038,6 +1009,27 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: linear-gradient(rgb(254,252,232), rgba(254,252,232,0.6), rgb(254,252,232)),url(../images/about.webp);
 }
 
+/* Gallery */
+
+.gallery-item-main {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery-item-main img:hover {
+  transform: none;
+}
+
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-yellow-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(113 63 18 / var(--tw-bg-opacity));
@@ -1082,14 +1074,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-row: span 2 / span 2;
   }
 
-  .md\:row-auto {
-    grid-row: auto;
-  }
-
-  .md\:row-span-3 {
-    grid-row: span 3 / span 3;
-  }
-
   .md\:row-start-2 {
     grid-row-start: 2;
   }
@@ -1117,24 +1101,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: block;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
-  .md\:grid-rows-1 {
-    grid-template-rows: repeat(1, minmax(0, 1fr));
-  }
-
-  .md\:grid-rows-2 {
-    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -1145,26 +1113,18 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: column;
   }
 
-  .md\:place-content-stretch {
-    place-content: stretch;
-  }
-
   .md\:bg-\[url\(\'\/images\/hero\.webp\'\)\] {
     background-image: url('/images/hero.webp');
   }
 }
 
 @media (min-width: 61em) {
-  .lg\:-order-1 {
-    order: -1;
+  .lg\:order-2 {
+    order: 2;
   }
 
   .lg\:order-1 {
     order: 1;
-  }
-
-  .lg\:order-2 {
-    order: 2;
   }
 
   .lg\:col-span-2 {
