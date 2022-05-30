@@ -518,10 +518,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -655,6 +651,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .min-h-\[50vh\] {
   min-height: 50vh;
+}
+
+.min-h-\[29rem\] {
+  min-height: 29rem;
 }
 
 .w-full {
@@ -1142,6 +1142,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: block;
   }
 
+  .md\:min-h-\[54rem\] {
+    min-height: 54rem;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1182,6 +1186,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:min-h-\[75vh\] {
     min-height: 75vh;
+  }
+
+  .lg\:min-h-\[67rem\] {
+    min-height: 67rem;
   }
 
   .lg\:grid-cols-2 {
