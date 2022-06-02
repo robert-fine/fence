@@ -498,6 +498,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .fixed {
   position: fixed;
 }
@@ -621,6 +633,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .mb-12 {
@@ -1180,8 +1196,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 0px;
   }
 
+  .md\:ml-0 {
+    margin-left: 0px;
+  }
+
   .md\:block {
     display: block;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:min-h-\[54rem\] {
@@ -1220,6 +1244,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .lg\:flex {
+    display: flex;
   }
 
   .lg\:grid {

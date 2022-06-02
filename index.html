@@ -26,7 +26,7 @@
                              <a href="tel:5555555555" class="pl-1">(555) 555-5555</a>
                         </div>
 
-                        <div class="flex justify-center items-center">
+                        <div class="hidden justify-center items-center md:flex">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <desc>Download more icon variants from https://tabler-icons.io/i/mail</desc>
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -87,7 +87,7 @@
 
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
                         <div class="grid grid-cols-1 grid-rows-2 bg-yellow-100">
-                            <img src="/images/gate.webp" alt="">
+                            <img src="/images/gate.webp" alt="Custom iron gate">
                             <div class="flex flex-col p-4 justify-center items-center">
                                 <p class="pb-2 text-2xl">Custom Gates</p>
                                 <p class="text-center pb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore qui consectetur ratione repudiandae laborum temporibus eveniet, totam distinctio error!</p>
@@ -96,7 +96,7 @@
                         </div>
 
                         <div class="grid grid-cols-1 grid-rows-2 bg-yellow-100">
-                            <img src="/images/opener.webp" alt="">
+                            <img src="/images/opener.webp" alt="gate with automatic opener">
                             <div class="flex flex-col p-4 justify-center items-center">
                                 <p class="pb-2 text-2xl text-center">Automatic Opener Installation</p>
                                 <p class="text-center pb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore qui consectetur ratione repudiandae laborum temporibus eveniet, totam distinctio error!</p>
@@ -105,7 +105,7 @@
                         </div>
 
                         <div class="grid grid-cols-1 grid-rows-2 bg-yellow-100">
-                            <img src="/images/privacy.webp" alt="">
+                            <img src="/images/privacy.webp" alt="pine privacy fence">
                             <div class="flex flex-col p-4 justify-center items-center">
                                 <p class="pb-2 text-2xl">Privacy Fence</p>
                                 <p class="text-center pb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore qui consectetur ratione repudiandae laborum temporibus eveniet, totam distinctio error!</p>
@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="grid grid-cols-1 grid-rows-2 bg-yellow-100">
-                            <img src="/images/picket.webp" alt="">
+                            <img src="/images/picket.webp" alt="wooden picket fence">
                             <div class="flex flex-col p-4 justify-center items-center">
                                 <p class="pb-2 text-2xl">Other Fences</p>
                                 <p class="text-center pb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore qui consectetur ratione repudiandae laborum temporibus eveniet, totam distinctio error!</p>
@@ -223,17 +223,17 @@
 
                     <div class="flex flex-col pb-2 w-full">
                         <label for="name">Your Name</label>
-                        <input type="text" name="name" id="quote-name" class="border-2 border-yellow-500 outline-yellow-900 focus:outline-offset-2" required>
+                        <input type="text" name="name" id="name" class="border-2 border-yellow-500 outline-yellow-900 focus:outline-offset-2" required>
                     </div>
 
                     <div class="flex flex-col pb-2 w-full">
                         <label for="email">Your Email</label>
-                        <input type="email" name="email" id="quote-email" class="border-2 border-yellow-500 outline-yellow-900 focus:outline-offset-2" required>
+                        <input type="email" name="email" id="email" class="border-2 border-yellow-500 outline-yellow-900 focus:outline-offset-2" required>
                     </div>
 
                     <div class="flex flex-col pb-2 w-full">
                         <label for="phone">Your Phone Number</label>
-                        <input type="tel" name="phone" id="quote-phone" class="border-2 border-yellow-500 outline-yellow-900 focus:outline-offset-2" required>
+                        <input type="tel" name="phone" id="phone" class="border-2 border-yellow-500 outline-yellow-900 focus:outline-offset-2" required>
                     </div>
 
                     <fieldset class="flex flex-col pb-2 w-full">
@@ -242,7 +242,7 @@
                             <div>
                                 <label><input type="radio" name="contact" id="contactChoice1-phone" value="phone" class="accent-yellow-900" checked> Phone</label>
                             </div>
-                            <div>
+                            <div class="ml-2 md:ml-0">
                                 <label><input type="radio" name="contact" id="contactChoice2-email" value="email" class="accent-yellow-900"> Email</label>
                             </div>
                         </div>
@@ -275,7 +275,7 @@
                     </div>
                     <div class="row-span-4 mb-12 lg:mb-0">
                         <h3 class="my-2 text-2xl overflow-hidden">Servicing Acadiana</h3>
-                        <iframe width="100%" height="85%" class="map" style="border:0" loading="lazy" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOdRcuJOjJoYRDLeA92tLP50&key=AIzaSyCvCBTafpupPbj44R5pVEv_UHxC2EdboFQ"></iframe>
+                        <iframe title="Google map of Acadiana area of Louisiana" width="100%" height="85%" class="map" style="border:0" loading="lazy" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOdRcuJOjJoYRDLeA92tLP50&key=AIzaSyCvCBTafpupPbj44R5pVEv_UHxC2EdboFQ"></iframe>
                     </div>
                 </div>
             </div>
@@ -287,6 +287,7 @@
             <ul class="row-start-2 flex justify-around w-full">
                 <li>
                     <a href="https://www.facebook.com">
+                        <span class="sr-only">Facebook page</span>
                         <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" color="white"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>    
                     </a>
                 </li>
